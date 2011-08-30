@@ -1,0 +1,27 @@
+Rio, 29/8/11
+
+PROBLEMAS
+	- Já existe, mas não é utilizado.
+	- Falta de padrão
+	- 1 pessoa conhece tudo (depende dela para fazer)
+	- bug -- >= bug+3
+	- faz deploy == nao funciona
+	- acumular muita coisa para fazer o deploy
+	
+
+Pair Programming - Programação pareada, reduz o numero de bugs.
+
+Revisão de código - Adicionar uma coluna a tabela antes de pronto, para revisar o código, melhora a qualidade do código e diminui a fuga do padrão.
+
+Tech talk - Bate papo de 3 horas para compartilhar soluções e problemas difundindo o conhecimento.
+
+Brawn bag - Discussoes na hora do almoço, ao inves de sair para almoçar pede comida e senta para discutir os projetos.
+
+Dojo 
+	- Linguagem de programação
+	- Lógica
+	- Testes
+
+Se juntar para todos resolverem o mesmo problema, sendo de qualquer tipo a cima.
+
+
