@@ -1,0 +1,33 @@
+Rio, 31/08/2011
+
+Refactoring Famosos
+
+- Rename
+- Extract Variable
+- Extract Method
+- Extract Class
+- Inline
+- Move up
+
+
+Code Smells
+- Heranca
+- Metodo e Construtor com longa lista de parametros
+- Metodo com mais de 10 linhas
+- Classe com mais de 50 linhas
+- Switch
+- Data Envy
+
+
+- Tell Don't ask
+
+* Nao ter mais de duas chamadas de ponto em um objeto:
+	Double valor = fornecedor.getNotaFiscal().getValor();
+	Double novoValor = valor * imposto;
+	fornecedor.getNotaFiscal().setValor(novoValor);
+
+	=== MUDA PARA ===
+
+	fornecedor.calculaImpostoDaNotaFiscalCom(imposto);
+
+	* colocar o calculo dentro da classe fornecedor.
