@@ -1,0 +1,73 @@
+Rio 01/09/2011
+
+Modelo de metodo de teste
+
+@Test
+public void deveriaCriarSessoes(){
+	//DADO
+	- inicializar variaveis
+
+	//QUANDO
+	------> criaria as sessoes
+
+	//ENTAO
+	- assert
+}
+
+Teste integrado para testar classe com dependencia, mais que unitario, exemplo: controller + dao.
+
+@Test
+public void deveriaCriarSessoes(){
+	//DADO
+	EspetaculoDAO dao = mock(EspetaculoDAO.class);
+	EspetaculoController controller = new EspetaculoController(dao);
+	Espetaculo e = new Espetaculo();
+	
+	//QUANDO
+	controller.salvar(e);
+
+	//ENTAO
+	verify(dao).salvar(e);  //verifica se o metodo salvar foi chamado no dao com o objeto e;
+}
+
+Stub -> verificar tambem se retorna o que deveria e nao só se foi chamado corretamente.
+Definindo um comportamento para o metodo.
+
+@Test
+public void deveriaListarSessoes(){
+	//DADO
+	EspetaculoDAO dao = mock(EspetaculoDAO.class);
+	EspetaculoController controller = new EspetaculoController(dao);
+	Espetaculo e = new Espetaculo();
+	when (dao.listar()).thenReturn(Array.asList(e));
+
+	//QUANDO
+	List<Espetaculo> espetaculos = controller.listar();
+
+	//ENTAO
+	assertThat(espetaculos.get(0), is(equalTo(e));
+}
+
+//Verificacao de comportamento verifica se o metodo salvar foi chamado pelo menos 5 vezes.
+verify(dao).atLeast(5).salvar(anything());
+
+Integracao continua -> Sincronizar o codigo com o repositorio sempre que possivel, o tempo todo.
+
+*** IF IT HURTS, DO IT MORE OFTEN ***
+
+Build Continuo - A cada commit
+	- compilar
+	- testar
+	- deployar (homologacao)
+		- testar
+	- package (pronto para deployar)
+	- mandar email avisando
+
+
+Blog: agilenomundoreal > kanban > rodrigo yoshima
+
+--- Ferramentas de evolucao do banco. Migration - para cada alteracao de banco escreve-se duas linhas uma que faz e uma que desfaz.
+
+
+
+
