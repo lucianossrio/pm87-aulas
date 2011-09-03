@@ -1,0 +1,11 @@
+Rio, 02/09/11
+
+Teste de aceitacao - testar uma funcionalidade inteira, uma acao do usuario, ex: logar no sistema.
+
+Duas maneiras:
+
+	- browser: abre uma janela do browser, para realizar os testes. Selenium
+	- background: faz a requisicao em background soh valida o html nao faz teste de javascript por exemplo. HTMLUnit
+
+
+WebDriver [DSL] para juntar os dois tipos.
